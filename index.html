@@ -302,10 +302,10 @@
         <p class="sec-label" style="font-size:9px">os pais da noiva</p>
         <p style="font-family:'Bodoni Moda',serif;font-size:19px;color:var(--ink);margin-top:11px;line-height:1.5">Benedito Elias Souza<br>Maria Liduina da Silva</p>
       </div>
-      <div class="place-divider reveal" style="margin:34px auto"></div>
-      <div class="reveal d1" style="text-align:center">
+      <div class="place-divider reveal" style="margin:12px auto"></div>
+      <div class="reveal d1" style="text-align:center;margin-bottom:56px">
         <p class="sec-label" style="font-size:9px">os pais do noivo</p>
-        <p style="font-family:'Bodoni Moda',serif;font-size:19px;color:var(--ink);margin-top:11px;line-height:1.5">George Gomes do Santos <span style="font-style:italic;font-size:13px;color:var(--blue)">(in memoriam)</span><br>Maria Edna Coelho de Oliveira</p>
+        <p style="font-family:'Bodoni Moda',serif;font-size:19px;color:var(--ink);margin-top:11px;line-height:1.5">George Gomes Dos Santos <span style="font-style:italic;font-size:13px;color:var(--blue)">(in memoriam)</span><br>Maria Edna Coelho de Oliveira</p>
       </div>
     </div>
   </section>
@@ -359,7 +359,7 @@
   <section id="countdown">
     <div class="inner">
       <p class="sec-label reveal">a contagem começou</p>
-      <h2 class="sec-title reveal">Faltam <span class="it">pouco</span></h2>
+      <h2 class="sec-title reveal">Falta <span class="it">pouco</span></h2>
       <div class="cd-wrap reveal d1">
         <div class="cd-unit"><span class="cd-num" id="cd-d">00</span><span class="cd-lbl">dias</span></div>
         <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">horas</span></div>
@@ -473,6 +473,8 @@ const CONFIG = {
 
   // site dos noivos (lista de presentes + confirmação de presença)
   siteCasal: 'https://www.gabiandluan.com.br',
+  sitePresentes: 'https://www.gabiandluan.com.br/#/presentes',
+  siteRsvp: 'https://www.gabiandluan.com.br/#/rsvp',
 
   versiculo:    'Para que todos vejam e saibam, considerem e juntamente entendam que a mão do Senhor fez isso.',
   versiculoRef: 'Isaías 41:20 · ARA',
@@ -497,9 +499,9 @@ txt('verseRef',CONFIG.versiculoRef);
 txt('footerNote','“'+CONFIG.versiculo+'” · '+CONFIG.versiculoRef);
 document.getElementById('mapCerimonia').href=CONFIG.mapCerimonia;
 document.getElementById('mapRecepcao').href=CONFIG.mapRecepcao;
-document.getElementById('giftBtn').href=CONFIG.siteCasal;
+document.getElementById('giftBtn').href=CONFIG.sitePresentes;
 const giftSiteLink=document.getElementById('giftSiteLink');
-if(giftSiteLink){giftSiteLink.href=CONFIG.siteCasal;giftSiteLink.textContent=CONFIG.siteCasal.replace(/^https?:\/\//,'');}
+if(giftSiteLink){giftSiteLink.href=CONFIG.sitePresentes;giftSiteLink.textContent=CONFIG.sitePresentes.replace(/^https?:\/\//,'');}
 document.title=CONFIG.noivos+' — Casamento';
 
 /* ─── MÚSICA (mp3 embutido) ─── */
@@ -566,7 +568,7 @@ function startCountdown(){
 }
 
 /* ─── Confirmar presença ─── */
-document.getElementById('confirmBtn').href = CONFIG.siteCasal;
+document.getElementById('confirmBtn').href = CONFIG.siteRsvp;
 
 /* ─── Copiar chave PIX ─── */
 (function(){
